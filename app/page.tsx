@@ -1,65 +1,45 @@
-import Image from "next/image";
+import Navbar from "./components";
+import Hero from "./hero";
+import Programs from "./programs";
+import Stats from "./stats";
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#faf9f6]">
+      <Navbar />
+      <Hero />
+      <Stats />
+
+      {/* Program Section */}
+      <Programs />
+
+      {/* About/Legacy Section */}
+      <section className="px-8 py-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="h-[350px] bg-emerald-50 rounded-lg border-2 border-dashed border-emerald-200 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000"
+            alt="Legacy"
+            className="w-full h-full object-cover opacity-80"
+          />
+        </div>
+        <div>
+          <span className="text-[10px] text-emerald-600 font-bold uppercase tracking-widest">Her Story</span>
+          <h2 className="font-serif text-3xl text-slate-800 mt-4 mb-6">A life of purpose, <br /> a legacy of giving.</h2>
+          <p className="text-slate-600 text-sm leading-relaxed mb-8">
+            Anthonia Oluwakemi Adedapo-Joshua was a woman whose generosity shaped every community she touched.
+            This foundation ensures her values—compassion, education, and service—continue to transform lives.
           </p>
+          <button className="bg-emerald-600 text-white px-6 py-3 rounded text-xs font-semibold">Read her full story</button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Simple Footer */}
+      <footer className="bg-slate-900 py-12 px-8 text-center border-t border-dashed border-slate-700">
+        <p className="text-slate-500 text-[10px] uppercase tracking-widest">
+          © 2026 Anthonia Oluwakemi Adedapo-Joshua Memorial Foundation.
+        </p>
+      </footer>
+    </main>
   );
 }
