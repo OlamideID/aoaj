@@ -10,11 +10,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stats />
-
-      {/* Program Section */}
+      4
       <Programs />
 
-      {/* About/Legacy Section */}
       <section className="px-8 py-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="h-[350px] bg-emerald-50 rounded-lg border-2 border-dashed border-emerald-200 overflow-hidden">
           <img
@@ -34,7 +32,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Simple Footer */}
       <footer className="bg-slate-900 py-12 px-8 text-center border-t border-dashed border-slate-700">
         <p className="text-slate-500 text-[10px] uppercase tracking-widest">
           © 2026 Anthonia Oluwakemi Adedapo-Joshua Memorial Foundation.
